@@ -1,6 +1,6 @@
 # 2626-POO-YAMBERLA-ERICK
 
-Nombre del estudiante: Erick Yamberla
+Nombre del estudiante: Erick Santiago Yamberla Inzuasti
 
 Descripción de los programas desarrollados:
 
