@@ -56,6 +56,3 @@ python .\PARCIAL_1\SEMANA_3\programacion_tradicional\tradicional.py
 ```powershell
 python .\PARCIAL_1\SEMANA_3\programacion_poo\main.py
 ```
-
-Si deseas que cambie el nombre del estudiante o añada más reflexiones,
-indícamelo y actualizo el archivo.
