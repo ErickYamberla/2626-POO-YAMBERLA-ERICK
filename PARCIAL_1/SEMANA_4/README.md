@@ -127,12 +127,7 @@ Buenas prácticas y posibles extensiones
 - Tests: añadir pruebas unitarias (pytest) para las clases y servicios.
 - Interfaz: implementar una CLI interactiva o una API web (Flask/FastAPI) para exponer las operaciones.
 
-Notas para entrega
-------------------
-- El archivo `main.py` demuestra las funcionalidades mínimas solicitadas.
-- Si va a entregar este proyecto, asegúrese de que el campo "Nombre del estudiante" arriba contiene su nombre completo.
-
-Reflexión sobre modularidad (ampliada)
+Reflexión sobre modularidad
 --------------------------------------
 La separación entre `modelos` y `servicios` facilita:
 
