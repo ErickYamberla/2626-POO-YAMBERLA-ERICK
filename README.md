@@ -56,3 +56,59 @@ python .\PARCIAL_1\SEMANA_3\programacion_tradicional\tradicional.py
 ```powershell
 python .\PARCIAL_1\SEMANA_3\programacion_poo\main.py
 ```
+
+---
+
+## Semana 8 - proyecto `restaurante_app`
+
+Nombre del estudiante: Erick Santiago Yamberla Inzuasti
+
+Descripción:
+
+Este proyecto implementa un sistema básico de gestión de un restaurante que permite registrar y listar productos, bebidas y clientes. Está diseñado para evidenciar los principios SOLID (SRP, OCP y LSP) aplicados al modelado orientado a objetos.
+
+Estructura del proyecto (dentro de `PARCIAL_1/SEMANA_8`):
+
+```
+restaurante_app/
+├── modelos/
+│   ├── __init__.py
+│   ├── producto.py
+│   ├── bebida.py
+│   └── cliente.py
+├── servicios/
+│   ├── __init__.py
+│   └── restaurante.py
+└── main.py
+```
+
+Responsabilidad de las clases:
+
+- `Producto` (`modelos/producto.py`): datos comunes de un producto y método `mostrar_informacion()`.
+- `Bebida` (`modelos/bebida.py`): hereda de `Producto`, añade atributos como `tamano` y `presentacion`, sobrescribe `mostrar_informacion()`.
+- `Cliente` (`modelos/cliente.py`): modela la información de un cliente y su método `mostrar_informacion()`.
+- `Restaurante` (`servicios/restaurante.py`): servicio que administra el registro y listado de productos y clientes, valida duplicados y usa polimorfismo para listar productos.
+
+Relación entre `Producto` y `Bebida`:
+
+`Bebida` es una especialización de `Producto`. Se utiliza herencia porque una bebida es un tipo de producto; al sobrescribir `mostrar_informacion()` la bebida puede presentarse con información adicional, y `Restaurante` puede manejar ambos tipos en la misma colección sin conocer el tipo concreto.
+
+Principios aplicados:
+
+- SRP (Single Responsibility Principle): cada clase tiene una única responsabilidad clara.
+- OCP (Open/Closed Principle): `Bebida` extiende `Producto` sin modificar la lógica del servicio.
+- LSP (Liskov Substitution Principle): instancias de `Bebida` pueden usarse donde se espera un `Producto`.
+
+Ejecución:
+
+Abrir la terminal en la raíz del repositorio y ejecutar:
+
+```powershell
+python .\PARCIAL_1\SEMANA_8\restaurante_app\main.py
+```
+
+Reflexión breve:
+
+Diseñar módulos con responsabilidades claras facilita el mantenimiento y la extensión del sistema. Aplicando SOLID conseguimos que agregar nuevas funcionalidades (por ejemplo, un nuevo tipo de producto) requiera cambios mínimos y localizados.
+
+
