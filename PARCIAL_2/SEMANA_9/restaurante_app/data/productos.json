@@ -1,0 +1,38 @@
+{
+  "P001": {
+    "codigo": "P001",
+    "nombre": "Prueba",
+    "categoria": "General",
+    "precio": 9.5
+  },
+  "P002": {
+    "codigo": "P002",
+    "nombre": "Hamburguesa",
+    "categoria": "Comida",
+    "precio": 14.0
+  },
+  "P003": {
+    "codigo": "P003",
+    "nombre": "Coca-Cola",
+    "categoria": "Bebida",
+    "precio": 4.5
+  },
+  "P004": {
+    "codigo": "P004",
+    "nombre": "Ensalada César",
+    "categoria": "Entrada",
+    "precio": 11.25
+  },
+  "P005": {
+    "codigo": "P005",
+    "nombre": "Brownie",
+    "categoria": "Postre",
+    "precio": 6.75
+  },
+  "P006": {
+    "codigo": "P006",
+    "nombre": "Agua Mineral",
+    "categoria": "Bebida",
+    "precio": 3.0
+  }
+}
