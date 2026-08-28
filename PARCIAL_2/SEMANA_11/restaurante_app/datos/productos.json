@@ -1,0 +1,44 @@
+[
+  {
+    "codigo": "P001",
+    "nombre": "Hamburguesa Clásica",
+    "categoria": "Platos principales",
+    "precio": 18.5,
+    "stock": 10
+  },
+  {
+    "codigo": "P002",
+    "nombre": "Pollo a la Parrilla",
+    "categoria": "Platos principales",
+    "precio": 22.0,
+    "stock": 14
+  },
+  {
+    "codigo": "P003",
+    "nombre": "Coca-Cola 500ml",
+    "categoria": "Bebidas",
+    "precio": 5.5,
+    "stock": 30
+  },
+  {
+    "codigo": "P004",
+    "nombre": "Ensalada César",
+    "categoria": "Entradas",
+    "precio": 12.0,
+    "stock": 16
+  },
+  {
+    "codigo": "P005",
+    "nombre": "Brownie",
+    "categoria": "Postres",
+    "precio": 7.5,
+    "stock": 20
+  },
+  {
+    "codigo": "P006",
+    "nombre": "Agua Mineral",
+    "categoria": "Bebidas",
+    "precio": 3.0,
+    "stock": 35
+  }
+]
