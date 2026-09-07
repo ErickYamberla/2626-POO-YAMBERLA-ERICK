@@ -1,0 +1,12 @@
+﻿[
+  {
+    "identificacion": "U001",
+    "nombre": "Ana García",
+    "correo": "ana@restaurante.com"
+  },
+  {
+    "identificacion": "U002",
+    "nombre": "Luis Pérez",
+    "correo": "luis@restaurante.com"
+  }
+]
