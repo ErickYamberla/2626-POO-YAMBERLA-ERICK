@@ -112,3 +112,90 @@ Reflexión breve:
 Diseñar módulos con responsabilidades claras facilita el mantenimiento y la extensión del sistema. Aplicando SOLID conseguimos que agregar nuevas funcionalidades (por ejemplo, un nuevo tipo de producto) requiera cambios mínimos y localizados.
 
 
+
+## Semana 10 - persistencia de productos (restaurante_app)
+
+Nombre del estudiante: Erick Santiago Yamberla Inzuasti
+
+Descripción:
+Este hito añade persistencia de productos en formato JSON al proyecto restaurante_app. Los productos se guardan en datos/productos.json y se cargan al iniciar la aplicación, reconstruyendo objetos Producto para mantener la lógica orientada a objetos.
+
+Estructura (extra añadida):
+`
+restaurante_app/
+├── datos/
+│   └── productos.json
+├── modelos/
+│   ├── __init__.py
+│   ├── producto.py
+│   └── cliente.py
+├── servicios/
+│   ├── __init__.py
+│   ├── archivo_servicio.py
+│   └── restaurante.py
+├── main.py
+└── README.md
+` 
+
+Responsabilidades:
+- modelos/producto.py: clase Producto con validaciones, to_dict() y from_dict().
+- servicios/archivo_servicio.py: lectura y escritura de productos.json (with open, json.load, json.dump) y manejo de excepciones.
+- servicios/restaurante.py: administra colección de objetos Producto en memoria y solicita guardado/recuperación al ArchivoServicio.
+- main.py: coordina el flujo y utiliza el servicio Restaurante.
+
+Flujo de carga y guardado:
+- Al iniciar: main crea Restaurante → Restaurante utiliza ArchivoServicio.cargar_productos() → cada registro válido se convierte en Producto y se incorpora a la colección en memoria.
+- Al modificar productos: Restaurante actualiza la colección en memoria y llama ArchivoServicio.guardar_productos() con la lista de diccionarios.
+
+Excepciones controladas:
+- FileNotFoundError: ausencia inicial de productos.json se trata como colección vacía.
+- json.JSONDecodeError: archivo con formato inválido se detecta y se omiten registros corruptos (se muestra mensaje).
+- PermissionError: se informa si no hay permisos para leer o escribir.
+- KeyError / ValueError: registros incompletos o inválidos se omiten y no detienen la aplicación.
+
+Ejecución:
+Abrir terminal en PARCIAL_2/SEMANA_10/restaurante_app y ejecutar:
+`
+python main.py
+` 
+
+
+Comprobación de persistencia:
+1. Registrar uno o más productos desde el menú.
+2. Salir de la aplicación.
+3. Ejecutar nuevamente python main.py — los productos previamente registrados deben listarse automáticamente.
+
+---
+
+## Semana 12 - mejoras de rendimiento con colecciones
+
+Descripción:
+En la Semana 12 se mejoró la forma en que la aplicación busca, consulta y valida información utilizando colecciones auxiliares en memoria, manteniendo las colecciones principales para almacenamiento y persistencia.
+
+Mejoras implementadas:
+- Índices en memoria:
+  - Productos y usuarios se almacenan en diccionarios internos indexados por código de producto e identificación de usuario, permitiendo búsquedas O(1) mediante buscar_producto(codigo) y buscar_usuario(identificacion).
+  - Se añadió un índice auxiliar `_ventas_por_usuario` (dict) que mapea `identificacion_usuario` → lista de `Venta`. La consulta `ventas_por_usuario(identificacion)` utiliza este índice en lugar de recorrer cada vez la lista completa de ventas.
+- Mantenimiento de colecciones:
+  - Se mantuvieron las listas principales (`_productos`, `_usuarios`, `_ventas`) para recorrido y persistencia en JSON.
+  - Al registrar una venta se actualizan ambas estructuras (lista principal e índice auxiliar). En caso de fallo, la operación revierte ambos.
+  - Los índices se reconstruyen al iniciar la aplicación a partir de los objetos cargados desde JSON.
+- Uso de `set`:
+  - Se utiliza `set` sólo cuando aporta unicidad o validaciones de pertenencia (por ejemplo, para mostrar categorías únicas).
+
+Cómo probar las mejoras:
+1. Ejecutar desde la carpeta del proyecto Semana_12:
+
+```powershell
+python .\PARCIAL_2\SEMANA_12\restaurante_app\main.py
+```
+2. Registrar o cargar usuarios, productos y ventas existentes.
+3. Buscar un producto por código (buscar_producto) y un usuario por identificación (buscar_usuario).
+4. Consultar ventas por usuario: `ventas_por_usuario(identificacion)` debe devolver las ventas sin recorrer la colección completa de ventas.
+5. Registrar una venta válida y comprobar que el stock se actualiza y que `_ventas_por_usuario` contiene la nueva venta.
+6. Cerrar y volver a ejecutar la aplicación para verificar que los índices se reconstruyen correctamente desde los archivos JSON.
+
+Notas:
+- No se añadieron funcionalidades nuevas fuera del alcance (préstamos, facturación, proveedores, etc.).
+- La lógica de negocio permanece en `servicios/restaurante.py` y los modelos siguen siendo objetos.
+- README en `PARCIAL_2/SEMANA_12/restaurante_app/README.md` contiene un resumen de las mejoras y pruebas realizadas.
