@@ -1,0 +1,23 @@
+[
+  {
+    "codigo": "P001",
+    "nombre": "Hamburguesa Clásica",
+    "categoria": "Platos principales",
+    "precio": 18.5,
+    "stock": 15
+  },
+  {
+    "codigo": "P002",
+    "nombre": "Ensalada César",
+    "categoria": "Entradas",
+    "precio": 12.0,
+    "stock": 10
+  },
+  {
+    "codigo": "P003",
+    "nombre": "Jugo Natural",
+    "categoria": "Bebidas",
+    "precio": 7.5,
+    "stock": 20
+  }
+]
