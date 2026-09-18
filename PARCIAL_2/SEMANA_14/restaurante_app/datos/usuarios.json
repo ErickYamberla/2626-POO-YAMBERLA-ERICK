@@ -1,0 +1,20 @@
+[
+  {
+    "usuario": "admin",
+    "contrasena": "admin123",
+    "nombre": "Administrador",
+    "correo": "admin@restauranteapp.com"
+  },
+  {
+    "usuario": "carlos",
+    "contrasena": "carlos456",
+    "nombre": "Carlos Gómez",
+    "correo": "carlos@restauranteapp.com"
+  },
+  {
+    "usuario": "empleado",
+    "contrasena": "1234",
+    "nombre": "Empleado",
+    "correo": "empleado@restauranteapp.com"
+  }
+]
