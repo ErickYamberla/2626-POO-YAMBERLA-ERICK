@@ -1,0 +1,44 @@
+[
+  {
+    "usuario": "admin",
+    "contrasena": "admin123",
+    "nombre": "Administrador General",
+    "correo": "admin@restauranteapp.com"
+  },
+  {
+    "usuario": "carlos",
+    "contrasena": "carlos456",
+    "nombre": "Carlos Gómez",
+    "correo": "carlos@restauranteapp.com"
+  },
+  {
+    "usuario": "empleado",
+    "contrasena": "1234",
+    "nombre": "Empleado de Turno",
+    "correo": "empleado@restauranteapp.com"
+  },
+  {
+    "usuario": "erick",
+    "contrasena": "erick2026",
+    "nombre": "Erick Yamberla",
+    "correo": "erick@restauranteapp.com"
+  },
+  {
+    "usuario": "maria",
+    "contrasena": "maria789",
+    "nombre": "María López",
+    "correo": "maria@restauranteapp.com"
+  },
+  {
+    "usuario": "juan",
+    "contrasena": "juan321",
+    "nombre": "Juan Pérez",
+    "correo": "juan@restauranteapp.com"
+  },
+  {
+    "usuario": "ana",
+    "contrasena": "ana654",
+    "nombre": "Ana Torres",
+    "correo": "ana@restauranteapp.com"
+  }
+]
