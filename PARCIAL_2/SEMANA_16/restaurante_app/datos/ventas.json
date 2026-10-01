@@ -1,0 +1,42 @@
+[
+  {
+    "codigo": "V001",
+    "usuario": "carlos",
+    "producto_codigo": "P001",
+    "producto_nombre": "Hamburguesa Clásica",
+    "cantidad": 2,
+    "precio_unitario": 18.5,
+    "total": 37.0,
+    "fecha": "2026-09-26 13:15:00"
+  },
+  {
+    "codigo": "V002",
+    "usuario": "maria",
+    "producto_codigo": "P003",
+    "producto_nombre": "Jugo Natural de Naranja",
+    "cantidad": 3,
+    "precio_unitario": 7.5,
+    "total": 22.5,
+    "fecha": "2026-09-27 11:30:00"
+  },
+  {
+    "codigo": "V003",
+    "usuario": "ana",
+    "producto_codigo": "P004",
+    "producto_nombre": "Chaulafán Especial",
+    "cantidad": 8,
+    "precio_unitario": 10.0,
+    "total": 80.0,
+    "fecha": "2026-09-27 15:05:18"
+  },
+  {
+    "codigo": "V004",
+    "usuario": "gustavo",
+    "producto_codigo": "P001",
+    "producto_nombre": "Hamburguesa Clásica",
+    "cantidad": 5,
+    "precio_unitario": 18.5,
+    "total": 92.5,
+    "fecha": "2026-09-30 19:42:11"
+  }
+]

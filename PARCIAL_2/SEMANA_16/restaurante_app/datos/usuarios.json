@@ -1,0 +1,66 @@
+[
+  {
+    "id": "USR-001",
+    "usuario": "admin",
+    "contrasena": "admin123",
+    "nombre": "Administrador General",
+    "correo": "admin@restauranteapp.com",
+    "rol": "Administrador"
+  },
+  {
+    "id": "USR-002",
+    "usuario": "empleado",
+    "contrasena": "1234",
+    "nombre": "Empleado de Turno",
+    "correo": "empleado@restauranteapp.com",
+    "rol": "Empleado"
+  },
+  {
+    "id": "USR-003",
+    "usuario": "carlos",
+    "contrasena": "carlos456",
+    "nombre": "Carlos Gómez",
+    "correo": "carlos@restauranteapp.com",
+    "rol": "Cliente"
+  },
+  {
+    "id": "USR-004",
+    "usuario": "erick",
+    "contrasena": "erick2026",
+    "nombre": "Erick Yamberla",
+    "correo": "erick@restauranteapp.com",
+    "rol": "Cliente"
+  },
+  {
+    "id": "USR-005",
+    "usuario": "maria",
+    "contrasena": "maria789",
+    "nombre": "María López",
+    "correo": "maria@restauranteapp.com",
+    "rol": "Cliente"
+  },
+  {
+    "id": "USR-006",
+    "usuario": "juan",
+    "contrasena": "juan321",
+    "nombre": "Juan Pérez",
+    "correo": "juan@restauranteapp.com",
+    "rol": "Empleado"
+  },
+  {
+    "id": "USR-007",
+    "usuario": "ana",
+    "contrasena": "ana654",
+    "nombre": "Ana Torres",
+    "correo": "ana@restauranteapp.com",
+    "rol": "Cliente"
+  },
+  {
+    "id": "USR-008",
+    "usuario": "gustavo",
+    "contrasena": "1234",
+    "nombre": "Gustavo Fernández",
+    "correo": "gustavo@restauranteapp.com",
+    "rol": "Cliente"
+  }
+]
